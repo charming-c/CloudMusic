@@ -6,13 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:background="@color/red"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/main_linearlayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <Button
+            android:background="@drawable/actionbar_menu"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginVertical="15dp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/search"
+            android:id="@+id/search"
+            app:iconifiedByDefault="false"
+            app:queryHint="搜索..."
+            android:layout_width="match_parent"
+            android:layout_weight="9"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:itemIconSize="30dp"
+        android:background="@color/white"
+        app:menu="@menu/my_navigation_items"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
