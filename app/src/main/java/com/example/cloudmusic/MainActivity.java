@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity implements MainView.view {
     public void initFragment() {
         fragments = new ArrayList<Fragment>();
 
-        MineFragment mineFragment = new MineFragment();
         FoundFragment foundFragment = new FoundFragment();
+        MineFragment mineFragment = new MineFragment();
         SocialFragment socialFragment = new SocialFragment();
         fragments.add(mineFragment);
         fragments.add(foundFragment);
